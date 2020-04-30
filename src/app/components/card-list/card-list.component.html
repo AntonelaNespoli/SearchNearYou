@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row" *ngFor="let item of items; index as i" class="animated low fadeIn">
+        <div class="col">
+            <div class="card mb-3 bg-dark">
+                <div class="row no-gutters">
+                    <div class="col-md-4 ">
+                        <img class="imgContainer" *ngIf="item.photos != undefined && (item.photos[0].width / item.photos[0].height > 1); else elseImg" src={{item.photos[0].getUrl({maxHeight:250})}} alt="" width="100%" height="279px">
+                        <ng-template #elseImg>
+                            <img class="imgContainer" src={{defaultImg}} alt="" width="100%" height="100%">
+                        </ng-template>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">{{item.name}}
+                                <span *ngIf="item.opening_hours != undefined && item.opening_hours.open_now; else elseTag" class="card-text text-muted">Open</span>
+                                <ng-template #elseTag>
+                                    <span class="card-text text-muted">Close </span>
+                                </ng-template>
+                            </h5>
+                            <p class="card-text">{{item.vicinity}}</p>
+                            <p *ngIf="(item.price_level != undefined)" class="card-text">Price Level: {{item.price_level}}</p>
+                            <p *ngIf="(item.rating != undefined)" class="card-text">{{item.rating}} <i class="fas fa-star optionIcon"></i> - Total User Rating: {{item.user_ratings_total}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap'
+
+//Set the common values
+
+//colours:
+$primary: #343a40    
+$secondary:  #00ff9e
+
+//Fonts:
+$font_family: 'Work Sans', sans-serif
+
+//values
+$border_radius:  5px 30px
+$box_shadow: 6px 6px #252525
+
+.animated 
+    -webkit-animation-duration: 1.5s
+    animation-duration: 1.5s
+    -webkit-animation-fill-mode: both
+    animation-fill-mode: both
+    & + .low 
+        -webkit-animation-duration: 2.5s
+        animation-duration: 2.5s
+  
+  
+@keyframes fadeIn
+    from 
+      opacity: 0
+    
+  
+    to 
+      opacity: 1
+    
+  
+  
+.fadeIn 
+    animation-name: fadeIn
+  

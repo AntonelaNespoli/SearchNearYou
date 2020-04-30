@@ -1,0 +1,9 @@
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" (click)="goBack()">
+        <i *ngIf="!getOptionWasChosen(); else elseIcon" class="fas fa-map-marker-alt navIcon"></i>
+        <ng-template #elseIcon>
+            <i class="fas fa-arrow-left navIcon"></i>
+        </ng-template>
+        {{ getTitle() }}
+    </a>
+</nav>

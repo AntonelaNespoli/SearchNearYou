@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <div class="col titleContainer">
+            <h1 class="title">Choose an option to search near you:</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <button mat-button class="option btn btn-dark animated fadeIn" (click)="chosenAnOption('cafe')">
+            <div class="circleContainer">
+                <i class="fas fa-coffee optionIcon"></i>
+            </div>
+                <p class="optionDescription">Coffe Shops</p>
+        </button>
+        </div>
+        <div class="col">
+            <button mat-button class="option btn btn-dark animated fadeIn" (click)="chosenAnOption('restaurant')">
+            <div class="circleContainer">
+                <i class="fas fa-utensils optionIcon"></i>
+            </div>
+                <p class="optionDescription">Restaurants</p>
+        </button>
+        </div>
+        <div class="col">
+            <button mat-button class="option btn btn-dark animated fadeIn" (click)="chosenAnOption('bar')">
+            <div class="circleContainer">
+                <i class="fas fa-glass-martini-alt optionIcon"></i>
+            </div>
+                <p class="optionDescription">Pubs</p>
+        </button>
+        </div>
+    </div>
+</div>
